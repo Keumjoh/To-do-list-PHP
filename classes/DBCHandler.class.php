@@ -3,7 +3,7 @@
     {   
         public function getTasks()
         {
-            $sqlQuery = "SELECT * FROM `tbl_tasks`";
+            $sqlQuery = "SELECT * FROM `tbl_tasks` Users_id = '".$this->getIPAddress()."';";
             $stmt = $this->ConnectDB()->query($sqlQuery);
             while($row = $stmt->fetch())
             {
